@@ -9,6 +9,10 @@ class MainHeadline(object):
     def get_url(self):
         return self.url
 
+    def get_headline(self):
+        return {'text': self.text,
+                'url': self.url}
+
 
 class MinorHeadline(object):
     def __init__(self, text):
