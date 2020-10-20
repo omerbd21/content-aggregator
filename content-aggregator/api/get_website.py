@@ -10,11 +10,11 @@ def get_website(url):
     try:
         website_object = get_all_headlines("https://" + url)
         website_name = website_object.get_name()
-        main_headline = str(website_object.get_main_headline())
-        minor_headlines = str(website_object.get_minor_headlines())
+        main_headline = website_object.get_main_headline()
+        minor_headlines = website_object.get_minor_headlines()
         website_json = {'website': website_name,
-                        'main_headline': str(main_headline),
-                        'minor_headlines': str(minor_headlines)}
+                        'main_headline': main_headline,
+                        'minor_headlines': minor_headlines}
         return str(website_json).replace('\\', '')
     except (AttributeError, IndexError):
         return "This website is not supported."
