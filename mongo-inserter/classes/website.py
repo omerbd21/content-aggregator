@@ -2,6 +2,7 @@ import mongoengine as mongoengine
 import datetime
 
 from classes import WebsiteInformation
+from settings import ALIAS, WEBSITE_COLLECTION
 
 
 class Website(mongoengine.Document):
