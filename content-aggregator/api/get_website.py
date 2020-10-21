@@ -1,6 +1,6 @@
-from flask import Blueprint, jsonify, json
-
+from flask import Blueprint
 from headlines import get_all_headlines
+from settings import HTTP_PREFIX
 
 website = Blueprint('website', __name__, url_prefix='/website')
 
@@ -8,7 +8,7 @@ website = Blueprint('website', __name__, url_prefix='/website')
 @website.route('/<url>')
 def get_website(url):
     try:
-        website_object = get_all_headlines("https://" + url)
+        website_object = get_all_headlines(HTTP_PREFIX + url)
         website_name = website_object.get_name()
         main_headline = website_object.get_main_headline()
         minor_headlines = website_object.get_minor_headlines()
