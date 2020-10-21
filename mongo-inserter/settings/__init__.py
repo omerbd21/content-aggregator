@@ -1,1 +1,1 @@
-from .config import ALIAS, WEBSITE_COLLECTION
+from .config import ALIAS, WEBSITE_COLLECTION, DB_HOST, DB_NAME, PASSWORD, USER
