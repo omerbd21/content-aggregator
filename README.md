@@ -11,6 +11,5 @@ This is my first "big" project and it contains the following microservices:
 
 ## What is it about?
 The purpose of this project is (as its name tells you) aggregate content from
-your favourite websites. The default options will include One, Sport5, Sport1,
-ynet and Walla!.
+your favourite websites. The default options will include One and ynet.
 
