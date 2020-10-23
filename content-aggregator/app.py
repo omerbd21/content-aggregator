@@ -5,6 +5,7 @@ from api import website
 app = Flask(__name__)
 
 app.register_blueprint(website)
+app.config['JSON_AS_ASCII'] = False
 
 
 @app.route('/')
