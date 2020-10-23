@@ -5,7 +5,7 @@ from settings import ALIAS, WEBSITE_COLLECTION
 
 
 class Website(mongoengine.Document):
-    name = mongoengine.StringField(required=True)
+    name = mongoengine.StringField(required=True, unique=True)
     url = mongoengine.URLField(required=True)
     last_update = mongoengine.DateTimeField(default=datetime.datetime.now)
     website = mongoengine.DictField(required=True)
