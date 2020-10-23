@@ -15,6 +15,6 @@ def get_website(url):
         website_json = {'website': website_name,
                         'main_headline': main_headline,
                         'minor_headlines': minor_headlines}
-        return str(website_json).replace('\\', '')
+        return website_json
     except (AttributeError, IndexError):
         return "This website is not supported."
