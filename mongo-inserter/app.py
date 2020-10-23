@@ -1,2 +1,5 @@
+from connection import connect_mongo
+
+
 def run():
-    pass
+    connect_mongo()
