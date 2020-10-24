@@ -1,2 +1,5 @@
+from queries import website_names
+
+
 def run():
-    pass
+    print(website_names())
