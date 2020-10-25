@@ -1,3 +1,9 @@
--e git+git@gitlab.benda.com:omerbenda/omer-content-aggregator.git@7ae7d3a47346ec6fa43926f1961e04611795a7c5#egg=mongo_inserter_omerbenda&subdirectory=mongo-inserter
+click==7.1.2
+Flask==1.1.2
+itsdangerous==1.1.0
+Jinja2==2.11.2
+MarkupSafe==1.1.1
+mongo-inserter-omerbenda==1.0.0
 mongoengine==0.20.0
 pymongo==3.11.0
+Werkzeug==1.0.1
