@@ -1,8 +1,10 @@
+from api import website
 from connection import connect_mongo
 from flask import Response, Flask
 
 app = Flask(__name__)
 
+app.register_blueprint(website)
 
 with app.app_context():
     connect_mongo()
@@ -15,4 +17,3 @@ def index():
 
 def run():
     app.run(host='0.0.0.0', port=8080)
-
