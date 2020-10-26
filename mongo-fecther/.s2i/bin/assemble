@@ -1,2 +1,4 @@
 #!/bin/bash
-pwd
+cd mongo_inserter_files
+pip install .
+/usr/libexec/s2i/assemble
