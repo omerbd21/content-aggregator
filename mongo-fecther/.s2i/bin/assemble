@@ -1,3 +1,4 @@
 #!/bin/bash
-cd /opt/app-root/src/mongo_inserter_files
-ls -l
+/usr/libexec/s2i/assemble
+cd mongo_inserter_files
+pip install .
