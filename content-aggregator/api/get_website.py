@@ -12,9 +12,9 @@ def get_website(url):
         website_name = website_object.get_name()
         main_headline = website_object.get_main_headline()
         minor_headlines = website_object.get_minor_headlines()
-        website_json = {'website': website_name,
-                        'main_headline': main_headline,
-                        'minor_headlines': minor_headlines}
+        website_json = {"website": website_name,
+                        "main_headline": main_headline,
+                        "minor_headlines": minor_headlines}
         return website_json
     except (AttributeError, IndexError):
         return "This website is not supported."
