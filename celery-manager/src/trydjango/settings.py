@@ -123,3 +123,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+SERVICES_URLS = {
+    "content-aggregator": "http://content-aggregator-content-aggregator.192.168.5.60.nip.io/website",
+    "mongo-inserter": "http://mongo-inseter-content-aggregator.192.168.5.60.nip.io",
+    "mongo-fetcher": "http://mongo-fetcher-content-aggregator.192.168.5.60.nip.io"
+
+}
