@@ -25,7 +25,7 @@ SECRET_KEY = '@hh&)hed7(d*lqzlipkt)6)hdahnc$vz8*q&gulc%mp^xt5q=3='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [os.environ.get('LOCAL_IP')]
 
 
 # Application definition
@@ -126,17 +126,17 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 SERVICES_URLS = {
-    "content-aggregator": 'http://content-aggregator-content-aggregator.192.168.5.60.nip.io/website',
-    "mongo-inserter": 'http://mongo-inseter-content-aggregator.192.168.5.60.nip.io',
-    "mongo-fetcher": 'http://mongo-fetcher-content-aggregator.192.168.5.60.nip.io'
+    "content-aggregator": os.environ.get('content-aggregator')+'/website',
+    "mongo-inserter": os.environ.get('mongo-inserter'),
+    "mongo-fetcher": os.environ.get('mongo-fetcher')
 
 }
 
 MINUTES_DIVIDER = 3600
 
 # CELERY STUFF
-BROKER_URL = 'amqp://rabbitmq-cluster-content-aggregator.192.168.5.60.nip.io'
-CELERY_RESULT_BACKEND = 'amqp://rabbitmq-cluster-content-aggregator.192.168.5.60.nip.io'
+BROKER_URL = 'amqp://'+os.environ.get('RabbitMQ')
+CELERY_RESULT_BACKEND = 'amqp://'+os.environ.get('RabbitMQ')
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
