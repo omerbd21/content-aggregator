@@ -10,7 +10,7 @@ website = Blueprint('website', __name__)
 @website.route('/create', methods=['POST'])
 def create_website_entry():
     data = request.json
-    new_website = Website(name=data['name'], url=data['url'],
+    new_website = Website(name=data['website'], url=data['url'],
                           website=data['website_information'])
     new_website.save()
     return Response("Entry in.", 200)
@@ -18,7 +18,6 @@ def create_website_entry():
 
 @website.route('/update', methods=['PUT'])
 def update_headlines():
-    print(request.json)
     data = request.json
     name = data['website']
     website_info = {'website': name,
