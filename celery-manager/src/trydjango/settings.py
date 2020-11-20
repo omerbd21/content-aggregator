@@ -125,17 +125,17 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 SERVICES_URLS = {
-    "content-aggregator": "http://content-aggregator-content-aggregator.192.168.5.60.nip.io/website",
-    "mongo-inserter": "http://mongo-inseter-content-aggregator.192.168.5.60.nip.io",
-    "mongo-fetcher": "http://mongo-fetcher-content-aggregator.192.168.5.60.nip.io"
+    "content-aggregator": 'http://'+os.environ.get('content-aggregator')+'/website',
+    "mongo-inserter": 'http://'+os.environ.get('mongo-inserter'),
+    "mongo-fetcher": 'http://'+os.environ.get('mongo-fetcher')
 
 }
 
 MINUTES_DIVIDER = 3600
 
 # CELERY STUFF
-BROKER_URL = 'amqp://localhost'
-CELERY_RESULT_BACKEND = 'amqp://localhost'
+BROKER_URL = 'amqp://'+os.environ.get('RabbitMQ')
+CELERY_RESULT_BACKEND = 'amqp://'+os.environ.get('RabbitMQ')
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_RESULT_SERIALIZER = 'json'
