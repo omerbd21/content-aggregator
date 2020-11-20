@@ -15,5 +15,5 @@ def get_website(request, website_name):
     website = get_website_from_mongo(website_name)
     if not website:
         website = get_website_from_content_aggregator(website_name)
-        update_website_in_mongo(website)
+        update_website_in_mongo(json.loads(website.content))
     return website

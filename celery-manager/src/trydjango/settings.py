@@ -131,6 +131,8 @@ SERVICES_URLS = {
 
 }
 
+MINUTES_DIVIDER = 3600
+
 # CELERY STUFF
 BROKER_URL = 'amqp://localhost'
 CELERY_RESULT_BACKEND = 'amqp://localhost'
