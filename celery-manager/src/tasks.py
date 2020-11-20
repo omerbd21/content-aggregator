@@ -42,6 +42,5 @@ def get_website_from_content_aggregator(website_name):
 @shared_task
 def update_website_in_mongo(website_info):
     headers = {'content-type': 'application/json'}
-    code = requests.put(url=SERVICES_URLS['mongo-inserter'] + "/update",
+    requests.put(url=SERVICES_URLS['mongo-inserter'] + "/update",
                         data=json.dumps(website_info), headers=headers)
-    print(code.headers['content-type'])
