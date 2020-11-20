@@ -15,12 +15,12 @@ your favourite websites. The default options will include One and ynet.
 
 
 ## How did I set the project up?
-1. A Minishift (mini openshift) centos server with the following containers:
-  a. content-aggregator, a flask component built with BeautifulSoup
-  b. mongo-inserter, a flask component to update MongoDB
-  c. mongo-fetcher, a flask component to fetch info from MongoDB
-  d. a RabbitMQ cluster for the Celery app
-  e. The celery-manager, a django app built with celery
+1. A Minishift (mini openshift) centos server with the following containers:\n
+  a. content-aggregator, a flask component built with BeautifulSoup\n
+  b. mongo-inserter, a flask component to update MongoDB\n
+  c. mongo-fetcher, a flask component to fetch info from MongoDB\n
+  d. a RabbitMQ cluster for the Celery app\n
+  e. The celery-manager, a django app built with celery\n
 2. A MongoDB centos server
 3. A GitLab centos server to configure webhooks and manage this repo.
 
