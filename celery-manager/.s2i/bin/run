@@ -1,3 +1,0 @@
-#!/bin/bash
-src/manage.py startapp
-/opt/application/run.sh
