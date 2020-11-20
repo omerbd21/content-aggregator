@@ -9,7 +9,6 @@ sys.path.insert(0, '../trydjango')
 from trydjango.settings import SERVICES_URLS
 
 
-
 # TODO : Get website list from mongo
 def get_website_names(request):
     websites_request = requests.get(url=SERVICES_URLS['mongo-fetcher'] + "/names")
