@@ -18,8 +18,8 @@ def create_website_entry():
 
 @website.route('/update', methods=['PUT'])
 def update_headlines():
+    print(request)
     data = request.json
-    print (type(data))
     name = data['website']
     website_info = {'website': name,
                     'main_headline': data['main_headline'],
