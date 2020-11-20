@@ -19,8 +19,8 @@ def create_website_entry():
 @website.route('/update', methods=['PUT'])
 def update_headlines():
     data = request.json
-    name = data['name']
-    website_info = {'name': name,
+    name = data['website']
+    website_info = {'website': name,
                     'main_headline': data['main_headline'],
                     'minor_headlines': data['minor_headlines']}
     Website.objects(name=name).update(set__website=website_info,
