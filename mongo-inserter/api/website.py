@@ -24,5 +24,5 @@ def update_headlines():
                     'main_headline': data['main_headline'],
                     'minor_headlines': data['minor_headlines']}
     Website.objects(name=name).update(set__website=website_info,
-                                      set__last_update=datetime.datetime.now())
+                                      set__last_update=datetime.datetime.now().strftime("%m/%d/%Y, %H:%M:%S"))
     return website_info
