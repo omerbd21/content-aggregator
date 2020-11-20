@@ -6,8 +6,8 @@ from django.http import HttpResponse, JsonResponse
 import sys
 
 sys.path.insert(0, '../src/trydjango')
-from trydjango.settings import SERVICES_URLS
-from tasks import get_website_from_mongo, get_website_from_content_aggregator, update_website_in_mongo
+from src.trydjango.settings import SERVICES_URLS
+from src.tasks import get_website_from_mongo, get_website_from_content_aggregator, update_website_in_mongo
 
 
 # Getting website input from content-aggregator

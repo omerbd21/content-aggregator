@@ -6,7 +6,7 @@ from django.http import HttpResponse, JsonResponse
 import sys
 
 sys.path.insert(0, '../trydjango')
-from trydjango.settings import SERVICES_URLS
+from src.trydjango.settings import SERVICES_URLS
 
 
 # TODO : Get website list from mongo
