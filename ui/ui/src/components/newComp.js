@@ -1,6 +1,9 @@
 import React from "react";
 import {withStyles} from "@material-ui/core/styles";
-import fetchWebsites from "../api/fetchWebsites";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import HttpIcon from "@material-ui/icons/Http";
+import ListItemText from "@material-ui/core/ListItemText";
+import ListItem from "@material-ui/core/ListItem";
 
 
 const styles = () => ({
@@ -24,11 +27,10 @@ class NewComp extends React.Component {
 
     componentDidMount() {
         fetch('http://celery-manager-content-aggregator.192.168.5.60.nip.io/website_names/', {
-            method: 'GET', // *GET, POST, PUT, DELETE, etc.
-            mode: 'cors', // no-cors, *cors, same-origin
+            method: 'GET',
+            mode: 'cors',
             headers: {
                 'Content-Type': 'application/json'
-                // 'Content-Type': 'application/x-www-form-urlencoded',
             },}).then(async (data) => {
                 this.setState({dataIsReturned: true, websites: await data.json()})})
                     .catch(err => console.error(err));
@@ -36,7 +38,12 @@ class NewComp extends React.Component {
 
 render()
 {
-    return (this.state.dataIsReturned ? this.state.websites.map((website) =><h1>{website}</h1>)
+    return (this.state.dataIsReturned ? this.state.websites.map((website) =><ListItem button>
+            <ListItemIcon>
+                <HttpIcon/>
+            </ListItemIcon>
+            <ListItemText primary={website}/>
+        </ListItem>)
         : <h1> Loading </h1>)
 }
 }

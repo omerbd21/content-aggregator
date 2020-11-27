@@ -6,7 +6,7 @@ import NewComp from "./components/newComp";
 
 function App() {
   return (
-      <NewComp />
+      <Dashboard />
   );
 }
 

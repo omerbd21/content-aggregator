@@ -16,7 +16,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import mainListItems from './listItems';
+import NewComp from "./newComp";
 
 const drawerWidth = 240;
 
@@ -129,13 +129,13 @@ export default function Dashboard() {
                 }}
                 open={open}
             >
-                <div className={classes.toolbarIcon}>
+                <div>
                     <IconButton onClick={handleDrawerClose}>
                         <ChevronLeftIcon />
                     </IconButton>
                 </div>
                 <Divider />
-                <List>{mainListItems}</List>
+                <List><NewComp /></List>
             </Drawer>
             <main className={classes.content}>
                 <div className={classes.appBarSpacer} />
