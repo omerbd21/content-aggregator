@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
@@ -91,6 +91,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+
 export default function Dashboard() {
     const classes = useStyles();
     const [open, setOpen] = React.useState(true);
@@ -103,7 +104,7 @@ export default function Dashboard() {
 
     return (
         <div className={classes.root}>
-            <CssBaseline />
+            <CssBaseline/>
             <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
                 <Toolbar className={classes.toolbar}>
                     <IconButton
@@ -113,7 +114,7 @@ export default function Dashboard() {
                         onClick={handleDrawerOpen}
                         className={clsx(classes.menuButton, open && classes.menuButtonHidden)}
                     >
-                        <MenuIcon />
+                        <MenuIcon/>
                     </IconButton>
                     <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
                         Omer's Content Aggregator
@@ -129,18 +130,22 @@ export default function Dashboard() {
             >
                 <div>
                     <IconButton onClick={handleDrawerClose}>
-                        <ChevronLeftIcon />
+                        <ChevronLeftIcon/>
                     </IconButton>
                 </div>
-                <Divider />
-                <List><WebsiteList /></List>
+                <Divider/>
+                <List>
+                    <WebsiteList/>
+                </List>
             </Drawer>
             <main className={classes.content}>
-                <div className={classes.appBarSpacer} />
+                <div className={classes.appBarSpacer}/>
                 <Container maxWidth="lg" className={classes.container}>
                     <Grid container spacing={3}>
-                        <WebsitePaper websiteName={'one'} />
-                        <WebsitePaper websiteName={'ynet'} />
+                        <div>
+                            <WebsitePaper websiteName={'one'}/>
+                        <WebsitePaper websiteName={'ynet'}/>
+                        </div>
                     </Grid>
                 </Container>
             </main>
