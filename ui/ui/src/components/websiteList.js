@@ -7,19 +7,9 @@ import ListItem from "@material-ui/core/ListItem";
 
 
 const styles = () => ({
-    screen: {
-        width: "15%",
-        height: "250px"
-    },
-    secondButton: {
-        margin: '10px',
-        padding: '20px',
-        alignItems: 'center',
-        backgroundColor: 'lightblue'
-    }
 });
 
-class NewComp extends React.Component {
+class WebsiteList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {dataIsReturned: false, websites: []};
@@ -47,4 +37,4 @@ render()
         : <h1> Loading </h1>)
 }
 }
-export default withStyles(styles)(NewComp);
+export default withStyles(styles)(WebsiteList);
