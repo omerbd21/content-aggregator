@@ -16,7 +16,7 @@ class WebsiteList extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://celery-manager-content-aggregator.192.168.5.60.nip.io/website_names/', {
+        fetch(process.env.CELERY+'website_names/', {
             method: 'GET',
             mode: 'cors',
             headers: {

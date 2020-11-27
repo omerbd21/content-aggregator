@@ -32,7 +32,7 @@ class WebsitePaper extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://celery-manager-content-aggregator.192.168.5.60.nip.io/website/'
+        fetch(process.env.CELERY+'/website/'
             +this.props.websiteName, {
             method: 'GET',
             mode: 'cors',
