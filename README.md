@@ -23,5 +23,4 @@ your favourite websites. The default options will include One and ynet.
   e. The celery-manager, a django app built with celery<br>
 2. A MongoDB centos server
 3. A GitLab centos server to configure webhooks and manage this repo.
-
----NOTICE: The React component is not yet finished and therefore it is not in here yet. It will be updated when possible.---
+4. I ended up running the JS React component from my computer, but you also can run it from a VM (there might be a possible implementation in minishift but I couldn't find an official one).
